@@ -1,9 +1,23 @@
 #!/bin/bash
 
-# wait What its look like the mixer of Python and PHP
+echo "========== script started =========="
+echo "Processing User Information..."
 
-username="Noman"
+sleep 2
+
+username=$USER
+host=$HOSTNAME
 age=69
 isChad=true
+kernel_version=$(uname -a)
 
-echo "My name is $username and I am $age years old and I am chad $isChad"
+echo "My name is $username, I am $age years old, am chad = $isChad, and my hostname is $host"
+
+sleep 1
+
+echo "My kernel information $kernel_version"
+
+sleep 1
+
+echo "========== script ended =========="
+exit 0
