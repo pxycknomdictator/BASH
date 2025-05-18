@@ -2,14 +2,14 @@
 
 echo "========== script started =========="
 
-echo "Do You Like Bash (Y/N):"
+# Best way to get input and variables in one line
 
-# This bad boy hold your script while user give his argument
-read command
+read -p "Do You Like Bash (Y/N): " command
 
 sleep 1
 
 echo "command executed: $command"
 
 echo "========== script ended =========="
+
 exit 0
