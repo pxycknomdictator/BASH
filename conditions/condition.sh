@@ -1,17 +1,13 @@
 #!/bin/bash
 
-read -p "Which language Do you prefer for Project? (JS/TS/RUST): " language
+root=conditions
+read -p "Enter a file name to create a file: " file
 
-# Check this $language is empty or not?
-
-if [[ -z $language ]]; then
-    echo "You didn't enter anything!"
+# Check that file name is empty or not?
+if [[ -z $file ]]; then
+    echo "File name is required"
+elif [[ -e "$root/$file" ]]; then # Check that file is already exists or not
+    echo "File is already exists"
 else
-    if [[ $language == "JS" ]]; then
-        echo "JavaScript Setup is initialized"
-    elif [[ $language == "RUST" ]]; then
-        echo "Rust setup is initialized"
-    else
-        echo "TypeScript Setup is initialized"
-    fi
+    touch "$root/$file"
 fi
