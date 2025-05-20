@@ -13,11 +13,10 @@ if [[ -z "$name" ]]; then
     exit 1
 fi
 
-echo "1. Greetings
-2. Show Date
-3. OS Info
-4. Exit
-"
+echo -e "\e[1;32m1. Greetings\e[0m"
+echo -e "\e[1;34m2. Show Date\e[0m"
+echo -e "\e[1;36m3. OS Info\e[0m"
+echo -e "\e[1;31m4. Exit\e[0m"
 
 read -p "Choose your option: " choice
 
