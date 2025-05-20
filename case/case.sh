@@ -2,16 +2,25 @@
 
 # case is just like switch statements in programming languages
 
-choices="ts"
+echo "1. Greetings
+2. Show Date
+3. Exit"
 
-case $choices in
-    js)
-        echo "You choose javaScript"
+read -p "Choose You Options: " choice
+
+if [[ -z $choice ]]; then
+    echo "Please select a choice"
+    exit 1
+fi
+
+case $choice in
+    1)
+        echo "Hello Noman"
         ;;
-    ts) 
-        echo "You choose typeScript"
+    2)
+        echo "Date is: $(date)"
         ;;
-    *)
-        echo "Invalid Type"
+    3)
+        exit 1
         ;;
 esac
