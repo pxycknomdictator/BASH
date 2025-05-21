@@ -1,21 +1,13 @@
 #!/bin/bash
 
-<< multiline_comment
-    Functions is a code that have same 
-    logic but with different arguments
-    blah blah blah
-multiline_comment
+<< comment
+    So $1 and $2 is the parameters inside the function body
+comment
 
-greeting() {
-    echo "Hello World"
+greetings() {
+    echo "Hello I am $1 age is: $2"
 }
 
-# SAME SAME but Different XD
-
-function sayHello() {
-    echo "Hello Bash"
-}
-
-# Wait what this is how to call the functions????
-greeting
-sayHello
+greetings "Noman" 69
+greetings "Jawad" 59
+greetings "John Cena" 100
